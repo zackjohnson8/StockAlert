@@ -9,9 +9,18 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
+    init() {
+        UINavigationBar.appearance().largeTitleTextAttributes =
+                [.font : UIFont(name: "AvenirNext-DemiBold", size: 40)!]
+    }
 
     var body: some View {
         NavigationView {
+            VStack {
+                Section(header: Text("Items")) {
+                    Text("Item 1")
+                }
+            }.navigationTitle(Text("Nav Text").font(.subheadline))
         }
     }
 }
