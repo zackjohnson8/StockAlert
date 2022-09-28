@@ -18,17 +18,7 @@ struct ContentView: View {
         NavigationView {
             GeometryReader { metrics in
                 VStack(alignment: .leading) {
-
-                    VStack(alignment: .leading) {
-                        Spacer()
-                        Text("VStack")
-                                .font(.largeTitle)
-                                .fontWeight(.bold)
-                                .padding(.leading)
-                                .frame(maxWidth: .infinity, alignment: .top)
-                                .border(.black, width: 2)
-                        Spacer()
-                    }
+                    GraphView()
                             .frame(
                                     minWidth: 0,
                                     maxWidth: .infinity,
@@ -40,16 +30,7 @@ struct ContentView: View {
 
                     Spacer()
 
-                    VStack(alignment: .leading) {
-                        Spacer()
-                        Text("VStack")
-                                .font(.largeTitle)
-                                .fontWeight(.bold)
-                                .padding(.leading)
-                                .frame(maxWidth: .infinity, alignment: .top)
-                                .border(.black, width: 2)
-                        Spacer()
-                    }
+                    StockListView()
                             .frame(
                                     minWidth: 0,
                                     maxWidth: .infinity,
@@ -61,7 +42,13 @@ struct ContentView: View {
 
 
                 }
-                        .navigationTitle(Text("Nav Text").font(.subheadline))
+                        .navigationTitle(Text("Alerts").font(.subheadline))
+                        .navigationBarItems(trailing:
+                        Button(action: {
+                            print("User icon pressed...")
+                        }) {
+                            Image(systemName: "gearshape.fill").imageScale(.large)
+                        })
                         .border(.black, width: 2)
             }
         }
@@ -74,3 +61,4 @@ struct ContentView_Previews: PreviewProvider {
         return ContentView()
     }
 }
+
