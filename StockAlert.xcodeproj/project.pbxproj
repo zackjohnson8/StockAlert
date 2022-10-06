@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D45A617F3AAAC777002F534F /* StockListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A60CC70FE537168E83409 /* StockListView.swift */; };
+		D45A6655BD6F1649DFB487F1 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = D45A6AA430D912FB9C513B45 /* README.md */; };
 		D45A6D410FD9F6579E23171F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A6871954EC23BA3222DBE /* ContentView.swift */; };
 		D45A6D46263693889BFE6877 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A68D7807BAFF8D76C2FBF /* GraphView.swift */; };
 		D7F1363328DFC23F0000C1B9 /* StockAlertApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F1363228DFC23F0000C1B9 /* StockAlertApp.swift */; };
@@ -38,8 +39,11 @@
 
 /* Begin PBXFileReference section */
 		D45A60CC70FE537168E83409 /* StockListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockListView.swift; sourceTree = "<group>"; };
+		D45A62FDAC8BFEBE4DCBB7FC /* StockMover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockMover.swift; sourceTree = "<group>"; };
 		D45A6871954EC23BA3222DBE /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D45A68D7807BAFF8D76C2FBF /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		D45A6AA430D912FB9C513B45 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D45A6D83289330893F75DEE0 /* StockMoverService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockMoverService.swift; sourceTree = "<group>"; };
 		D7F1362F28DFC23F0000C1B9 /* StockAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7F1363228DFC23F0000C1B9 /* StockAlertApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockAlertApp.swift; sourceTree = "<group>"; };
 		D7F1363628DFC2440000C1B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D45A600CE167A899DE7BF635 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D45A6D83289330893F75DEE0 /* StockMoverService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		D45A60BF938A73F140398771 /* AlertDisplay */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +107,23 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		D45A6823D34A70E61194AE32 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D45A62FDAC8BFEBE4DCBB7FC /* StockMover.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D45A6A8CB823E9CBBCF78467 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				D45A600CE167A899DE7BF635 /* Services */,
+				D45A6823D34A70E61194AE32 /* Models */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		D7F1362628DFC23F0000C1B9 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +131,7 @@
 				D7F1364728DFC2440000C1B9 /* StockAlertTests */,
 				D7F1365128DFC2440000C1B9 /* StockAlertUITests */,
 				D7F1363028DFC23F0000C1B9 /* Products */,
+				D45A6AA430D912FB9C513B45 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +153,7 @@
 				D7F1363D28DFC2440000C1B9 /* StockAlert.xcdatamodeld */,
 				D7F1363828DFC2440000C1B9 /* Preview Content */,
 				D45A60BF938A73F140398771 /* AlertDisplay */,
+				D45A6A8CB823E9CBBCF78467 /* Database */,
 			);
 			path = StockAlert;
 			sourceTree = "<group>";
@@ -287,6 +318,9 @@
 				D45A617F3AAAC777002F534F /* StockListView.swift in Sources */,
 				D45A6D46263693889BFE6877 /* GraphView.swift in Sources */,
 				D45A6D410FD9F6579E23171F /* ContentView.swift in Sources */,
+				D45A6655BD6F1649DFB487F1 /* README.md in Sources */,
+				D45A69F943060365AB2C2D7D /* StockMoverService.swift in Sources */,
+				D45A6D3C4C964A11020B40B7 /* StockMover.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
