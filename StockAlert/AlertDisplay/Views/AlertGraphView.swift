@@ -5,17 +5,24 @@
 import Foundation
 import SwiftUI
 
-struct StockListView: View {
+struct AlertGraphView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Spacer()
-            Text("Stock List")
+            Text("Stock Graph")
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .padding(.leading)
                     .frame(maxWidth: .infinity, alignment: .top)
-                    .border(.black, width: 2)
+                    .border(.black, width: 1)
             Spacer()
         }
+
+    }
+}
+
+struct AlertGraphView_Previews: PreviewProvider {
+    static var previews: some View {
+        AlertGraphView()
     }
 }
