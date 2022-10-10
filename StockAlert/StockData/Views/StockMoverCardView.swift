@@ -53,6 +53,7 @@ struct StockMoverCardView: View {
             }
         }
 
+
     }
 }
 

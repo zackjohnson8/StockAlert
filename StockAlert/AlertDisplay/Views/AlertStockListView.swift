@@ -13,14 +13,13 @@ struct AlertStockListView: View {
     var body: some View {
         GeometryReader { metrics in
             VStack(alignment: .leading) {
-                List {
+                Spacer()
+                ScrollView(showsIndicators: false) {
                     ForEach(stockMovers, id: \.symbol) { stockMover in
-                        Section {
-                            StockMoverCardView(stockMover: stockMover).frame(height: metrics.size.height * 0.1)
-                        }
+                        StockMoverCardView(stockMover: stockMover).frame(width: metrics.size.width, height: metrics.size.height * 0.15)
                     }
-                }.listStyle(.insetGrouped)
-            }
+                }
+            }.frame(width: metrics.size.width, alignment: .center)
         }
     }
 }
