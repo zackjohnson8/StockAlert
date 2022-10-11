@@ -6,40 +6,28 @@ import Foundation
 import SwiftUI
 
 struct AlertNavigationView: View {
-    init() {
-        UINavigationBar.appearance().largeTitleTextAttributes =
-                [.font: UIFont(name: "AvenirNext-DemiBold", size: 40)!]
-    }
+  var filterView = FilterView()
+  var alertStockListView = AlertStockListView()
 
-    var body: some View {
-        NavigationView {
-            GeometryReader { metrics in
-                VStack(alignment: .leading) {
-                    AlertGraphView()
-                            .frame(
-                                    minWidth: 0,
-                                    maxWidth: .infinity,
-                                    minHeight: 0,
-                                    maxHeight: metrics.size.height * 0.30,
-                                    alignment: .topLeading
-                            )
+  init() {
+    UINavigationBar.appearance().largeTitleTextAttributes =
+        [.font: UIFont(name: "AvenirNext-DemiBold", size: 40)!]
+  }
 
-                    AlertStockListView()
-                }
-                        .navigationTitle(Text("Alerts").font(.subheadline))
-                        .navigationBarItems(trailing:
-                        Button(action: {
-                            print("User icon pressed...")
-                        }) {
-                            Image(systemName: "gearshape.fill").imageScale(.large)
-                        })
-            }
-        }
+  var body: some View {
+    NavigationView {
+      VStack(alignment: .leading) {
+        filterView
+        alertStockListView
+      }
+          .navigationTitle(Text("Alerts").font(.subheadline))
+      // Todo: Replace the text with an image of the logo/name
     }
+  }
 }
 
 struct AlertNavigationView_Previews: PreviewProvider {
-    static var previews: some View {
-        AlertNavigationView()
-    }
+  static var previews: some View {
+    AlertNavigationView()
+  }
 }
